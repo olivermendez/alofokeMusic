@@ -1,3 +1,5 @@
+import 'package:alofoke_music_app/components/appbar/appbar.dart';
+import 'package:alofoke_music_app/components/nav/navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -28,109 +30,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Alofoke Music',
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          title: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              //Icon(FontAwesomeIcons.youtube, color: Colors.red,),
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: Text(
-                  "Alofoke Music",
-                  style: TextStyle(
-                      color: Colors.black,
-                      letterSpacing: -1.0,
-                      fontWeight: FontWeight.w700),
-                ),
-              ),
-            ],
+          appBar: CustomAppBar(),
+          body: Center(
+            child: Container(
+              child: Text('Hello World'),
+            ),
           ),
-          actions: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Icon(
-                Icons.videocam,
-                color: Colors.black54,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Icon(
-                Icons.search,
-                color: Colors.black54,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12.0),
-              child: Icon(
-                Icons.account_circle,
-                color: Colors.black54,
-              ),
-            ),
-          ],
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
-          ),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                color: Colors.black54,
-              ),
-              title: Text(
-                "Home",
-                style: TextStyle(color: Colors.black54),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                color: Colors.black54,
-              ),
-              title: Text(
-                "Home",
-                style: TextStyle(color: Colors.black54),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.subscriptions,
-                color: Colors.black54,
-              ),
-              title: Text(
-                "Home",
-                style: TextStyle(color: Colors.black54),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.email,
-                color: Colors.black54,
-              ),
-              title: Text(
-                "Home",
-                style: TextStyle(color: Colors.black54),
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.folder,
-                color: Colors.black54,
-              ),
-              title: Text(
-                "Home",
-                style: TextStyle(color: Colors.black54),
-              ),
-            ),
-          ],
-          type: BottomNavigationBarType.fixed,
-        ),
-      ),
+          bottomNavigationBar: NavBar()),
     );
   }
 }
