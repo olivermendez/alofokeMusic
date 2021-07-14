@@ -8,25 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
-      theme: ThemeData(
-          primaryColor: Colors.white,
-          primaryColorBrightness: Brightness.light,
-          brightness: Brightness.light,
-          primaryColorDark: Colors.black,
-          canvasColor: Colors.white,
-          // next line is important!
-          appBarTheme: AppBarTheme(brightness: Brightness.dark)),
-      darkTheme: ThemeData(
-          primaryColor: Colors.black,
-          primaryColorBrightness: Brightness.dark,
-          primaryColorLight: Colors.black,
-          brightness: Brightness.dark,
-          primaryColorDark: Colors.black,
-          indicatorColor: Colors.white,
-          canvasColor: Colors.black,
-          // next line is important!
-          appBarTheme: AppBarTheme(brightness: Brightness.dark)),
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       title: 'Alofoke Music',
       home: Scaffold(
