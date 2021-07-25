@@ -3,28 +3,35 @@ class Person {
   final String phone;
   final String picture;
   final String about;
+  final String videoViews;
+  final String followers;
+  final String audioStream;
 
-  const Person(this.name, this.phone, this.picture, this.about);
+  const Person(this.name, this.phone, this.picture, this.about,
+      this.audioStream, this.followers, this.videoViews);
 }
 
 final List<Person> people = _people
     .map((e) => Person(
-          e['name'].toString(),
-          e['phone'].toString(),
-          e['picture'].toString(),
-          e['about'].toString(),
-        ))
+        e['name'].toString(),
+        e['phone'].toString(),
+        e['picture'].toString(),
+        e['about'].toString(),
+        e['videoViews'].toString(),
+        e['audioStream'].toString(),
+        e['followers'].toString()))
     .toList(growable: false);
 
 final List<Map<String, Object>> _people = [
   {
     "_id": "5ffcb6f688822e0af085fb2c",
     "index": 0,
-    "guid": "ff98bd8a-a590-40e1-80d0-c0547cae75a7",
-    "isActive": true,
-    "balance": "\$1,698.70",
-    "picture": "http://placehold.it/32x32",
-    "age": 38,
+    "videoViews": "10.3 B",
+    "albumDownloaded": '456.9 K',
+    "followers": "15.1 M",
+    "picture":
+        "https://alofokemusic.net/wp-content/uploads/2019/05/Alfa-12.jpg",
+    "audioStream": '18.3 M',
     "eyeColor": "green",
     "name": "El Alfa",
     "gender": "male",
